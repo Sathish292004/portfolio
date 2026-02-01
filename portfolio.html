@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sathish Kumar B - Digital Interactive Realm</title>
+    <meta name="description" content="Portfolio of Sathish Kumar B - Computer Science Engineering Student & Developer">
+    <meta name="author" content="Sathish Kumar B">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Sathish Kumar B - Digital Interactive Realm">
+    <meta property="og:description" content="Portfolio of Sathish Kumar B - Computer Science Engineering Student & Developer">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- External Libraries -->
+    <script src="https://unpkg.com/three@0.160.1/build/three.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    
+    <!-- Icons (Lucide via CDN) -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <h1 class="loading-title gradient-text">Portfolio</h1>
+            <p class="loading-subtitle">Loading amazing experiences...</p>
+            
+            <div class="loading-animation">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <span class="progress-text" id="progress-text">0%</span>
+            </div>
+            
+            <p class="loading-message" id="loading-message">Initializing 3D engine...</p>
+        </div>
+        
+        <!-- Background particles -->
+        <div class="particles-bg"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo gradient-text">Portfolio</div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link" data-section="home">Home</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#services" class="nav-link" data-section="services">Services</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content" style="display: none;">
+        
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-bg"></div>
+            <canvas id="hero-canvas" class="hero-canvas"></canvas>
+            
+            <div class="hero-content">
+                <h1 class="hero-title fade-in-up">
+                    <span class="text-foreground">Hi, I'm</span><br>
+                    <span class="gradient-text">Sathish Kumar B</span>
+                </h1>
+                
+                <p class="hero-subtitle fade-in-up">
+                    A developer passionate about building real-world software solutions
+                </p>
+                
+                <div class="hero-buttons fade-in-up">
+                    <button class="btn-neon" onclick="scrollToSection('about')">View My Work</button>
+                    <a href="#contact" class="btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <i data-lucide="chevron-down"></i>
+            </div>
+            
+            <!-- Floating elements -->
+            <div class="floating-element floating-1"></div>
+            <div class="floating-element floating-2"></div>
+            <div class="floating-element floating-3"></div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2>What I Can <span class="gradient-text">Help You With</span></h2>
+                    <p>Comprehensive solutions and services to bring your ideas to life with cutting-edge technology</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card fade-in-up">
+                        <div class="service-icon bg-primary">
+                            <i data-lucide="lightbulb"></i>
+                        </div>
+                        <h3>Real-world Case Studies</h3>
+                        <p>Comprehensive analysis and solutions with measurable outcomes for complex technical challenges</p>
+                    </div>
+                    
+                    <div class="service-card fade-in-up">
+                        <div class="service-icon bg-accent">
+                            <i data-lucide="palette"></i>
+                        </div>
+                        <h3>Interactive, Responsive UI Designs</h3>
+                        <p>Modern, accessible user interfaces that work seamlessly across all devices and platforms</p>
+                    </div>
+                    
+                    <div class="service-card fade-in-up">
+                        <div class="service-icon bg-neon-cyan">
+                            <i data-lucide="play"></i>
+                        </div>
+                        <h3>Animation & Prototype Demos</h3>
+                        <p>Engaging animations and interactive prototypes that bring ideas to life</p>
+                    </div>
+                    
+                    <div class="service-card fade-in-up">
+                        <div class="service-icon bg-secondary">
+                            <i data-lucide="file-text"></i>
+                        </div>
+                        <h3>UX Writing and Flows</h3>
+                        <p>Clear, intuitive user experience design with thoughtful content and navigation flows</p>
+                    </div>
+                    
+                    <div class="service-card fade-in-up">
+                        <div class="service-icon bg-neon-purple">
+                            <i data-lucide="heart"></i>
+                        </div>
+                        <h3>Passion Projects</h3>
+                        <p>Unique and innovative projects that showcase creativity and technical expertise</p>
+                    </div>
+                    
+                    <div class="service-card fade-in-up">
+                        <div class="service-icon bg-primary-glow">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <h3>Professional Documentation</h3>
+                        <p>Comprehensive documentation and stakeholder endorsements for project transparency</p>
+                    </div>
+                </div>
+                
+                <div class="section-cta fade-in-up">
+                    <p>Ready to collaborate on your next project? Let's create something amazing together.</p>
+                    <button class="btn-neon" onclick="scrollToSection('contact')">Start a Project</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2>About <span class="gradient-text">Me</span></h2>
+                    <p>I'm currently in my final year of Computer Science Engineering, and what excites me most is building software that actually solves real-world problems. Whether it's writing code in Java or Python, or bringing ideas to life through web development, I enjoy not just the technical part — but also working with people, sharing ideas, and growing together as a team.</p>
+                </div>
+                
+                <div class="about-cards">
+                    <div class="about-card fade-in-up">
+                        <div class="about-icon">
+                            <i data-lucide="calendar"></i>
+                        </div>
+                        <h3>Education</h3>
+                        <p>Final Year CSE Student</p>
+                    </div>
+                    
+                    <div class="about-card fade-in-up">
+                        <div class="about-icon">
+                            <i data-lucide="award"></i>
+                        </div>
+                        <h3>Internships</h3>
+                        <p>ML & Networking Experience</p>
+                    </div>
+                    
+                    <div class="about-card fade-in-up">
+                        <div class="about-icon">
+                            <i data-lucide="briefcase"></i>
+                        </div>
+                        <h3>Focus</h3>
+                        <p>Real-World Solutions</p>
+                    </div>
+                </div>
+                
+                <div class="timeline fade-in-up">
+                    <h3>My <span class="gradient-text">Journey</span></h3>
+                    <div class="timeline-container">
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="timeline-year">2023</div>
+                                <h4>B.E. Computer Science and Engineering</h4>
+                                <p class="timeline-company">KPR Institute of Engineering and Technology</p>
+                                <p>Currently in final year, focusing on software development, machine learning, and real-world problem solving.</p>
+                            </div>
+                            <div class="timeline-icon education">
+                                <i data-lucide="award"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="timeline-year">2023</div>
+                                <h4>Machine Learning Intern</h4>
+                                <p class="timeline-company">CodSoft</p>
+                                <p>Built and deployed ML models using Python and libraries like scikit-learn. Worked on real-world datasets, gained hands-on exposure to industry workflows.</p>
+                            </div>
+                            <div class="timeline-icon work">
+                                <i data-lucide="briefcase"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="timeline-year">2023</div>
+                                <h4>Virtual Intern</h4>
+                                <p class="timeline-company">Cisco</p>
+                                <p>Focused on networking concepts, design, and troubleshooting. Developed solid understanding of network infrastructure and IT practices.</p>
+                            </div>
+                            <div class="timeline-icon work">
+                                <i data-lucide="briefcase"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="timeline-year">2020</div>
+                                <h4>Diploma in Mechanical Engineering</h4>
+                                <p class="timeline-company">Kongu Velalar Polytechnic College</p>
+                                <p>Completed diploma with strong foundation in engineering principles and problem-solving methodologies.</p>
+                            </div>
+                            <div class="timeline-icon education">
+                                <i data-lucide="award"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section-cta fade-in-up">
+                    <p>My expertise spans across modern web technologies, cloud platforms, and development best practices.</p>
+                    <button class="btn-neon" onclick="scrollToSection('skills')">View My Skills</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (Basic) -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2>Featured <span class="gradient-text">Projects</span></h2>
+                    <p>Some of the projects I've worked on recently</p>
+                </div>
+                
+                <div class="projects-grid">
+                    <div class="project-card fade-in-up">
+                        <div class="project-image"></div>
+                        <div class="project-content">
+                            <h3>Project 1</h3>
+                            <p>Description of project and technologies used</p>
+                            <div class="project-links">
+                                <a href="#" class="btn-small">Live Demo</a>
+                                <a href="#" class="btn-small">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card fade-in-up">
+                        <div class="project-image"></div>
+                        <div class="project-content">
+                            <h3>Project 2</h3>
+                            <p>Description of project and technologies used</p>
+                            <div class="project-links">
+                                <a href="#" class="btn-small">Live Demo</a>
+                                <a href="#" class="btn-small">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card fade-in-up">
+                        <div class="project-image"></div>
+                        <div class="project-content">
+                            <h3>Project 3</h3>
+                            <p>Description of project and technologies used</p>
+                            <div class="project-links">
+                                <a href="#" class="btn-small">Live Demo</a>
+                                <a href="#" class="btn-small">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2>Technical <span class="gradient-text">Skills</span></h2>
+                    <p>Technologies and tools I work with</p>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-category fade-in-up">
+                        <h3>Frontend</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <span>HTML/CSS</span>
+                                <div class="skill-bar"><div class="skill-fill" data-skill="90"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <span>JavaScript</span>
+                                <div class="skill-bar"><div class="skill-fill" data-skill="85"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <span>React</span>
+                                <div class="skill-bar"><div class="skill-fill" data-skill="80"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category fade-in-up">
+                        <h3>Backend</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <span>Python</span>
+                                <div class="skill-bar"><div class="skill-fill" data-skill="85"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Java</span>
+                                <div class="skill-bar"><div class="skill-fill" data-skill="80"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Node.js</span>
+                                <div class="skill-bar"><div class="skill-fill" data-skill="75"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category fade-in-up">
+                        <h3>Tools & Others</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <span>Git</span>
+                                <div class="skill-bar"><div class="skill-fill" data-skill="85"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Machine Learning</span>
+                                <div class="skill-bar"><div class="skill-fill" data-skill="75"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Cloud Platforms</span>
+                                <div class="skill-bar"><div class="skill-fill" data-skill="70"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2>Get In <span class="gradient-text">Touch</span></h2>
+                    <p>Ready to start your next project? Let's discuss how we can bring your ideas to life</p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-form-container fade-in-up">
+                        <h3>Send me a message</h3>
+                        
+                        <div id="form-success" class="form-success" style="display: none;">
+                            <i data-lucide="check-circle"></i>
+                            <h4>Message Sent Successfully!</h4>
+                            <p>Thank you for reaching out. I'll get back to you within 24 hours.</p>
+                            <button class="btn-neon" onclick="resetForm()">Send Another Message</button>
+                        </div>
+                        
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Name *</label>
+                                    <input type="text" id="name" name="name" required>
+                                    <span class="error-message" id="name-error"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input type="email" id="email" name="email" required>
+                                    <span class="error-message" id="email-error"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <input type="text" id="subject" name="subject" required>
+                                <span class="error-message" id="subject-error"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                                <span class="error-message" id="message-error"></span>
+                            </div>
+                            
+                            <button type="submit" class="btn-neon submit-btn" id="submit-btn">
+                                <i data-lucide="send"></i>
+                                <span>Send Message</span>
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info-container fade-in-up">
+                        <div class="contact-info">
+                            <h3>Contact Information</h3>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <div>
+                                    <div class="contact-label">Email</div>
+                                    <div class="contact-value">sathishsince2004@gmail.com</div>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="phone"></i>
+                                </div>
+                                <div>
+                                    <div class="contact-label">Phone</div>
+                                    <div class="contact-value">+91 8678941800</div>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="map-pin"></i>
+                                </div>
+                                <div>
+                                    <div class="contact-label">Location</div>
+                                    <div class="contact-value">Tamil Nadu, India</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <h3>Follow Me</h3>
+                            <div class="social-icons">
+                                <a href="https://github.com/Sathish292004" target="_blank" class="social-icon">
+                                    <i data-lucide="github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/sathishkumar292004" target="_blank" class="social-icon">
+                                    <i data-lucide="linkedin"></i>
+                                </a>
+
+                            </div>
+                        </div>
+                        
+                        <div class="location-map">
+                            <h3>Location</h3>
+                            <div class="map-placeholder">
+                                <i data-lucide="map-pin"></i>
+                                <h4>Tamil Nadu, India</h4>
+                                <p>Available for remote work and collaboration</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Sathish Kumar B. All rights reserved..</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

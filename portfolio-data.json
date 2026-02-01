@@ -1,0 +1,250 @@
+{
+  "personal": {
+    "name": "Sathish Kumar B",
+    "title": "Computer Science Engineering Student & Developer",
+    "subtitle": "A developer passionate about building real-world software solutions",
+    "description": "I'm currently in my final year of Computer Science Engineering, and what excites me most is building software that actually solves real-world problems. Whether it's writing code in Java or Python, or bringing ideas to life through web development, I enjoy not just the technical part — but also working with people, sharing ideas, and growing together as a team.",
+    "location": "Tamil Nadu, India",
+    "email": "Sathishsince2004@gmail.com",
+    "phone": "+91 8678941800",
+    "availability": "Available for remote work and collaboration"
+  },
+  
+  "social": {
+    "github": "https://github.com/Sathish292004",
+    "linkedin": "https://linkedin.com/in/sathishkumar292004",
+  },
+  
+  "education": [
+    {
+      "year": "2023",
+      "degree": "B.E. Computer Science and Engineering",
+      "institution": "KPR Institute of Engineering and Technology",
+      "description": "Currently in final year, focusing on software development, machine learning, and real-world problem solving.",
+      "status": "ongoing",
+      "type": "education"
+    },
+    {
+      "year": "2020",
+      "degree": "Diploma in Mechanical Engineering",
+      "institution": "Kongu Velalar Polytechnic College",
+      "description": "Completed diploma with strong foundation in engineering principles and problem-solving methodologies.",
+      "status": "completed",
+      "type": "education"
+    }
+  ],
+  
+  "experience": [
+    {
+      "year": "2023",
+      "position": "Machine Learning Intern",
+      "company": "CodSoft",
+      "description": "Built and deployed ML models using Python and libraries like scikit-learn. Worked on real-world datasets, gained hands-on exposure to industry workflows.",
+      "type": "internship",
+      "technologies": ["Python", "scikit-learn", "Machine Learning", "Data Analysis"]
+    },
+    {
+      "year": "2023",
+      "position": "Virtual Intern",
+      "company": "Cisco",
+      "description": "Focused on networking concepts, design, and troubleshooting. Developed solid understanding of network infrastructure and IT practices.",
+      "type": "internship",
+      "technologies": ["Networking", "Network Design", "Troubleshooting", "IT Infrastructure"]
+    }
+  ],
+  
+  "skills": {
+    "frontend": [
+      { "name": "HTML/CSS", "level": 90 },
+      { "name": "JavaScript", "level": 85 },
+      { "name": "React", "level": 80 },
+      { "name": "TypeScript", "level": 75 },
+      { "name": "Tailwind CSS", "level": 85 }
+    ],
+    "backend": [
+      { "name": "Python", "level": 85 },
+      { "name": "Java", "level": 80 },
+      { "name": "Node.js", "level": 75 },
+      { "name": "Express.js", "level": 70 },
+      { "name": "REST APIs", "level": 80 }
+    ],
+    "tools": [
+      { "name": "Git", "level": 85 },
+      { "name": "Machine Learning", "level": 75 },
+      { "name": "Cloud Platforms", "level": 70 },
+      { "name": "Database Management", "level": 75 },
+      { "name": "DevOps", "level": 65 }
+    ]
+  },
+  
+  "services": [
+    {
+      "title": "Real-world Case Studies",
+      "description": "Comprehensive analysis and solutions with measurable outcomes for complex technical challenges",
+      "icon": "lightbulb",
+      "color": "primary"
+    },
+    {
+      "title": "Interactive, Responsive UI Designs",
+      "description": "Modern, accessible user interfaces that work seamlessly across all devices and platforms",
+      "icon": "palette",
+      "color": "accent"
+    },
+    {
+      "title": "Animation & Prototype Demos",
+      "description": "Engaging animations and interactive prototypes that bring ideas to life",
+      "icon": "play",
+      "color": "neon-cyan"
+    },
+    {
+      "title": "UX Writing and Flows",
+      "description": "Clear, intuitive user experience design with thoughtful content and navigation flows",
+      "icon": "file-text",
+      "color": "secondary"
+    },
+    {
+      "title": "Passion Projects",
+      "description": "Unique and innovative projects that showcase creativity and technical expertise",
+      "icon": "heart",
+      "color": "neon-purple"
+    },
+    {
+      "title": "Professional Documentation",
+      "description": "Comprehensive documentation and stakeholder endorsements for project transparency",
+      "icon": "users",
+      "color": "primary-glow"
+    }
+  ],
+  
+  "projects": [
+    {
+      "title": "E-Commerce Platform",
+      "description": "Full-stack e-commerce application with React frontend and Node.js backend",
+      "technologies": ["React", "Node.js", "MongoDB", "Express.js"],
+      "status": "completed",
+      "category": "web-development",
+      "features": ["User Authentication", "Payment Integration", "Admin Dashboard", "Responsive Design"],
+      "links": {
+        "live": "#",
+        "github": "#"
+      }
+    },
+    {
+      "title": "Machine Learning Model",
+      "description": "Predictive analytics model for business forecasting using Python and scikit-learn",
+      "technologies": ["Python", "scikit-learn", "Pandas", "NumPy"],
+      "status": "completed",
+      "category": "machine-learning",
+      "features": ["Data Preprocessing", "Model Training", "Performance Metrics", "Visualization"],
+      "links": {
+        "github": "#"
+      }
+    },
+    {
+      "title": "Portfolio Website",
+      "description": "Interactive 3D portfolio website with modern animations and responsive design",
+      "technologies": ["React", "Three.js", "Framer Motion", "Tailwind CSS"],
+      "status": "completed",
+      "category": "web-development",
+      "features": ["3D Graphics", "Smooth Animations", "Contact Form", "Mobile Responsive"],
+      "links": {
+        "live": "#",
+        "github": "#"
+      }
+    }
+  ],
+  
+  "certifications": [
+    {
+      "name": "Machine Learning Specialization",
+      "issuer": "Coursera - Stanford University",
+      "year": "2023",
+      "status": "completed"
+    },
+    {
+      "name": "JavaScript Algorithms and Data Structures",
+      "issuer": "FreeCodeCamp",
+      "year": "2023",
+      "status": "completed"
+    },
+    {
+      "name": "AWS Cloud Practitioner",
+      "issuer": "Amazon Web Services",
+      "year": "2023",
+      "status": "in-progress"
+    }
+  ],
+  
+  "achievements": [
+    {
+      "title": "Hackathon Winner",
+      "description": "First place in college-level programming hackathon",
+      "year": "2023"
+    },
+    {
+      "title": "Academic Excellence",
+      "description": "Consistent top performer in Computer Science courses",
+      "year": "2021-2023"
+    },
+    {
+      "title": "Open Source Contributor",
+      "description": "Regular contributor to open source projects on GitHub",
+      "year": "2022-present"
+    }
+  ],
+  
+  "interests": [
+    "Artificial Intelligence",
+    "Web Development",
+    "Cloud Computing",
+    "Open Source",
+    "Problem Solving",
+    "Team Collaboration",
+    "Continuous Learning"
+  ],
+  
+  "languages": [
+    { "name": "English", "level": "Fluent" },
+    { "name": "Tamil", "level": "Native" },
+    { "name": "Hindi", "level": "Conversational" }
+  ],
+  
+  "testimonials": [
+    {
+      "name": "Professor John Smith",
+      "role": "Computer Science Department Head",
+      "company": "KPR Institute of Engineering and Technology",
+      "message": "Sathish is one of the most dedicated and talented students I've had. His passion for real-world problem solving is evident in every project he undertakes."
+    },
+    {
+      "name": "Sarah Johnson",
+      "role": "ML Team Lead",
+      "company": "CodSoft",
+      "message": "During his internship, Sathish demonstrated exceptional learning ability and delivered high-quality ML models that exceeded our expectations."
+    }
+  ],
+  
+  "meta": {
+    "lastUpdated": "2024-01-15",
+    "version": "1.0",
+    "framework": "React with TypeScript",
+    "technologies": [
+      "React 18",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React Three Fiber",
+      "React Router",
+      "EmailJS"
+    ],
+    "designSystem": {
+      "colorScheme": "Deep space theme",
+      "primaryColor": "Electric blue (hsl(217, 91%, 60%))",
+      "accentColor": "Neon purple (hsl(280, 100%, 70%))",
+      "typography": "Inter font family",
+      "animations": "Framer Motion with custom CSS keyframes",
+      "3dElements": "Three.js with React Three Fiber"
+    }
+  }
+}
