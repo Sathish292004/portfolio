@@ -135,7 +135,7 @@ const AboutSection = () => {
             About <span className="gradient-text">Me</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            I'm currently in my final year of Computer Science Engineering, and what excites me most is building software that actually solves real-world problems. Whether it's writing code in Java or Python, or bringing ideas to life through web development, I enjoy not just the technical part — but also working with people, sharing ideas, and growing together as a team.
+           I recently completed my degree in Computer Science Engineering, and what excites me most is building software that actually solves real-world problems. Whether it's writing code in Java or Python, or bringing ideas to life through web development, I enjoy not just the technical part — but also working with people, sharing ideas, and growing together as a team.
           </p>
         </motion.div>
 
